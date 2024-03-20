@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Transition With SkeW</title>
+
+    <style>
+        body{
+            height: 100vh;
+
+            display: grid;
+            place-items: center;
+        }
+
+        .container{
+            perspective: 500px;
+        }
+
+        .container img{
+            width: 300px;
+            transition-duration: 2s;
+            transition-timing-function: linear;
+        }
+
+        .container img:hover{
+            transform: translateZ(200px);
+        }
+
+
+    </style>
+</head>
+<body>
+    
+
+    <div class="container">
+        <img src="./img/cutedog.jpg" alt="dog" />
+    </div>
+
+ 
+ 
+</body>
+</html>
