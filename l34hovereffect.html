@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style type="text/css">
+        body{
+            font-family: sans-serif;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+            background-color: #000;
+        }
+
+        a{  
+            width: 200px;
+            height: 50px;
+            color: white;
+            text-decoration: none;
+            font-size: 40px;
+            border: 5px solid #fff;
+            padding: 40px 80px;
+
+            position: relative;
+            overflow: hidden;
+         
+            transition-duration: 0.5s;
+
+            
+        }
+
+        a::before{
+           content: '';
+
+           width: 100%;
+           height: 30%;
+           background-color: #fff;
+           color: #fff;
+
+           border-radius: 0 0 100% 0;
+
+           position: absolute;
+           left: 0;
+           top: 0;
+
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           transition: all .5s;
+
+           z-index: -1;
+
+        }
+
+        a:hover::before{
+            height: 100%;
+            border-radius: 0 0 0 100%;
+        }
+
+        a:hover{
+            color: black;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+   
+    <a href="#">Hover Me</a>
+    
+
+</body>
+</html>

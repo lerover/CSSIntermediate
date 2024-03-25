@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style type="text/css">
+        body{
+            font-family: sans-serif;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        a{  
+            width: 100px;
+            height: 50px;
+            color: #000;
+            text-decoration: none;
+            font-size: 40px;
+            border: 5px solid #000;
+            padding: 40px 80px;
+
+            position: relative;
+            overflow: hidden;
+            transition-delay: 0.5s;
+            transition-duration: 0.5s;
+        }
+
+        a::before{
+           content: 'Hover Me';
+
+           width: 100%;
+           height: 100%;
+           background-color: steelblue;
+           color: #fff;
+
+           position: absolute;
+           left: 0;
+           top: 0;
+
+           display: flex;
+           justify-content: center;
+           align-items: center;
+
+           transition: transform .5s;
+
+        }
+
+        a::after{
+            content: 'Press';
+
+            background-color:yellow ;
+            width: 100%;
+            height: 100%;
+            color: #000;
+
+            position: absolute;
+            top: 0;
+            left: 0;
+            
+            display: flex;
+            justify-content: end;
+            align-items: center;
+
+            z-index: -1;
+
+            transition: transform 0.5s;
+
+
+        }
+
+        a:hover::before{
+            content: 'Me';
+            transform: translateX(50%);
+
+            justify-content: start;
+            padding-left: 5px;
+        }
+
+        a:hover::after{
+            transform: translateX(-50%);
+            justify-content: end;
+        }                                                                                               
+
+        a:active::before{
+            content: 'You';
+        }
+
+        a:active::after{
+            content: "Thank";
+        }
+/* 
+        a:hover::before{
+            transform: rotateX(0deg);
+        }
+
+        a:hover{
+            color: white;
+        }
+
+        a:hover::after{
+            transform: rotateX(0);
+        } */
+    </style>
+</head>
+<body>
+   
+    <a href="#"></a>
+    
+
+</body>
+</html>
