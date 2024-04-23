@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Hover Effect</title>
+    <style type="text/css">
+        body{
+            font-family: sans-serif;
+            height: 100vh;
+
+            display: flex;
+            justify-content: center;
+            align-items: center;
+
+        }
+
+        button{  
+            width: 200px;
+            height: 100px;
+            color: white;
+            text-decoration: none;
+            font-size: 30px;
+            border: 5px solid #000;
+           
+
+            
+         
+            transition-duration: 0.5s;
+
+            background: linear-gradient(
+                40deg,
+                red 40%,
+                black 60% 100%
+            );
+
+            background-size: 5%;
+        }
+
+       
+        
+        button:hover{
+            color: red;
+            background-size: 6%;
+            background-position: center;
+        }
+
+
+
+
+    </style>
+</head>
+<body>
+   
+    <button type="button">Hover Me</button>
+    
+
+</body>
+</html>
